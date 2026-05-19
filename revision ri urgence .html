@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Relations Internationales — Fiche ultra complète</title>
+    <style>
+        :root {
+            --bleu-fonce: #1e3a8a;
+            --violet: #7c3aed;
+            --orange: #ea580c;
+            --vert: #059669;
+            --rose: #db2777;
+            --cyan: #0891b2;
+            --jaune: #ca8a04;
+            --rouge: #dc2626;
+            --gris-fonce: #1e293b;
+            --gris-moyen: #475569;
+            --blanc: #ffffff;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #ffffff;
+            color: #0f172a;
+            line-height: 1.7;
+            max-width: 1400px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        /* En-tête général */
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #db2777 100%);
+            color: white;
+            padding: 40px 50px;
+            border-radius: 30px;
+            margin-bottom: 35px;
+            box-shadow: 0 20px 40px rgba(124,58,237,0.25);
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 5px;
+        }
+        .header .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50px;
+            padding: 12px 35px;
+        }
+        .meta span {
+            background: rgba(255,255,255,0.3);
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Séances */
+        .seance {
+            margin: 40px 0;
+            border-radius: 24px;
+            padding: 35px 40px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+            border-left: 10px solid;
+            transition: all 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .seance::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 100%;
+            background: inherit;
+            opacity: 0.2;
+        }
+        .seance:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(0,0,0,0.08);
+        }
+
+        /* Couleurs par séance (dégradés et bordures) */
+        .s1 { background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-color: #3b82f6; }
+        .s2 { background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 100%); border-color: #8b5cf6; }
+        .s3 { background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 100%); border-color: #f97316; }
+        .s4 { background: linear-gradient(135deg, #f0fdf4 0%, #bbf7d0 100%); border-color: #10b981; }
+        .s5 { background: linear-gradient(135deg, #fdf2f8 0%, #fbcfe8 100%); border-color: #ec4899; }
+        .s6 { background: linear-gradient(135deg, #ecfeff 0%, #a5f3fc 100%); border-color: #06b6d4; }
+        .s7 { background: linear-gradient(135deg, #eef2ff 0%, #c7d2fe 100%); border-color: #6366f1; }
+        .s8 { background: linear-gradient(135deg, #fff1f2 0%, #fecdd3 100%); border-color: #f43f5e; }
+        .s9 { background: linear-gradient(135deg, #f5f3ff 0%, #ddd6fe 100%); border-color: #8b5cf6; }
+        .s10 { background: linear-gradient(135deg, #f0fdfa 0%, #99f6e4 100%); border-color: #14b8a6; }
+        .s11 { background: linear-gradient(135deg, #fffbeb 0%, #fde68a 100%); border-color: #f59e0b; }
+        .s12 { background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%); border-color: #64748b; }
+
+        .seance h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #0f172a;
+            border-bottom: 3px solid rgba(0,0,0,0.1);
+            padding-bottom: 10px;
+        }
+        .seance h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 24px 0 12px;
+            color: #1e293b;
+        }
+        .seance h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 18px 0 8px;
+            color: #334155;
+        }
+        .seance p { margin-bottom: 14px; }
+        .seance ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 12px 0;
+        }
+        .seance li {
+            padding: 8px 0 8px 32px;
+            position: relative;
+            margin-bottom: 4px;
+        }
+        .seance li::before {
+            content: "▹";
+            position: absolute;
+            left: 8px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        /* Couleurs des puces */
+        .s1 li::before { color: #3b82f6; }
+        .s2 li::before { color: #8b5cf6; }
+        .s3 li::before { color: #f97316; }
+        .s4 li::before { color: #10b981; }
+        .s5 li::before { color: #ec4899; }
+        .s6 li::before { color: #06b6d4; }
+        .s7 li::before { color: #6366f1; }
+        .s8 li::before { color: #f43f5e; }
+        .s9 li::before { color: #8b5cf6; }
+        .s10 li::before { color: #14b8a6; }
+        .s11 li::before { color: #f59e0b; }
+        .s12 li::before { color: #64748b; }
+
+        /* Boîte mise en avant */
+        .highlight-box {
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: blur(5px);
+            border-radius: 16px;
+            padding: 20px 25px;
+            margin: 20px 0;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .highlight-box h4 {
+            margin-top: 0;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        /* Boîte notions clés */
+        .key-notions {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            border-radius: 18px;
+            padding: 22px 28px;
+            margin: 24px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .key-notions h4 {
+            color: #facc15;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        .key-notions p { margin: 6px 0; }
+        .key-notions strong { color: #facc15; }
+
+        /* Tableaux */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        th {
+            background: #1e293b;
+            color: white;
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e2e8f0;
+            background: rgba(255,255,255,0.8);
+            vertical-align: top;
+        }
+        tr:last-child td { border-bottom: none; }
+        /* Alternance de couleurs dans les tableaux */
+        tr:nth-child(even) td { background: rgba(0,0,0,0.02); }
+
+        .recap-authors {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-radius: 24px;
+            padding: 35px;
+            margin-top: 50px;
+        }
+        .recap-authors h2 {
+            color: #1e293b;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .footer {
+            text-align: center;
+            color: #64748b;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            border-top: 2px solid #cbd5e1;
+            padding-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>RELATIONS INTERNATIONALES</h1>
+    <div class="subtitle">Fiche de révision intégrale — Séances 1 à 12</div>
+    <div class="meta">
+        <span>👨‍🏫 Leandro Argento</span>
+        <span>🏛 Université Paris Cité</span>
+        <span>📘 L1 — 2024‑2025</span>
+        <span>📅 Examen demain</span>
+    </div>
+</div>
+
+<!-- ========= SEANCE 1 ========= -->
+<div class="seance s1">
+    <h2>SEANCE 1 — Peut-on parler de nouvelles relations internationales ?</h2>
+    <p><strong>Question centrale :</strong> L'État est-il encore l'acteur principal des RI ? Quels nouveaux acteurs, outils et valeurs redessinent les relations internationales ?</p>
+    <h3>1. Les trois approches classiques des RI</h3>
+    <ul>
+        <li><strong>Système international</strong> : centré sur les États, leurs interactions diplomatiques et militaires. Vision stato‑centrée héritée de Westphalie (1648).</li>
+        <li><strong>Système transnational</strong> : prend en compte les flux humains, économiques, informationnels qui traversent les frontières sans passer par les États.</li>
+        <li><strong>Communauté internationale</strong> : regroupe les États partageant des valeurs communes (droits de l'homme, démocratie). Notion plus normative que descriptive.</li>
+    </ul>
+    <h3>2. Les quatre grandes écoles théoriques</h3>
+    <ul>
+        <li><strong>Réalisme</strong> : l'État est un acteur rationnel égoïste, les RI sont un rapport de force permanent. Auteurs : Morgenthau, Aron, Waltz.</li>
+        <li><strong>Libéralisme</strong> : croit à la coopération par le droit, les institutions, la démocratie et le commerce. Auteurs : Keohane, Nye, Russett.</li>
+        <li><strong>Constructivisme</strong> : les identités et les perceptions façonnent les intérêts. Ex. la notion d'« ennemi » est socialement construite.</li>
+        <li><strong>Transnationalisme</strong> : insiste sur les flux et l'émergence d'une société globale. Auteurs : Rosenau, Badie, Smouts.</li>
+    </ul>
+    <div class="highlight-box">
+        <h4>Convention de Montevideo (1933)</h4>
+        <p>Définit l'État par quatre critères : 1) population permanente, 2) territoire délimité, 3) gouvernement effectif, 4) capacité de relations internationales. Cette définition reste la base du droit international.</p>
+    </div>
+    <h3>3. Nouveaux acteurs ou anciens recentrés ?</h3>
+    <ul>
+        <li><strong>Terrorisme</strong> : mode d'action ancien, mais central depuis le 11/09/2001. Instauration d'une logique d'affrontement global (Axe du Mal : Iran, Irak, Corée du Nord) et sacrifice des libertés au nom de la sécurité.</li>
+        <li><strong>Acteurs hybrides</strong> : pirates somaliens, Houthis au Yémen (attaques en mer Rouge contre Israël, 2024), groupes rebelles. Méthodes asymétriques pour peser sur la géopolitique.</li>
+        <li><strong>Mafias mondialisées</strong> : Camorra, Yakuzas, Triades, mafia russe. Elles conquièrent des territoires, exploitent la mondialisation et l'absence de justice internationale.</li>
+        <li><strong>Sud global</strong> : fin du monopole de la « performance » occidentale. Diplomatie de la réticence / coalition négative : ces États se définissent d'abord par leur opposition aux règles établies par les puissances historiques.</li>
+        <li><strong>Paradoxe du Sud global</strong> : au lieu de proposer un modèle alternatif, les puissances émergentes adoptent souvent les codes de la Realpolitik, reproduisant les héritages de domination occidentaux.</li>
+    </ul>
+    <h3>4. Nouveaux outils et nouvelles valeurs</h3>
+    <ul>
+        <li><strong>Tweetdiplomacy</strong> : Trump pionnier de la diplomatie du tweet. X (Twitter) et Truth Social deviennent des armes de mobilisation électorale et de guerre informationnelle. France : lancement de l'initiative « French Response » (2025) pour contrer la désinformation russe.</li>
+        <li><strong>Fin de l'idéalisme wilsonien</strong> : les 14 points de Wilson (transparence, autodétermination, désarmement) cèdent face à la diplomatie secrète et aux rapports de force.</li>
+        <li><strong>Sécuritisation</strong> : les migrations, la santé et le climat sont désormais lus exclusivement à travers un prisme sécuritaire. Accord UE‑Turquie (2016) : financement contre rétention des migrants — les valeurs humanitaires cèdent à une gestion comptable.</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p><strong>Reconnaissance d'un État :</strong> acte politique aux effets juridiques majeurs. On peut interagir sans reconnaître officiellement (ex. France/Italie avec Ankara sous Mustapha Kemal).</p>
+        <p><strong>Bataille épistémologique :</strong> Saïd (Orientalisme) montre que la domination réside dans la capacité de l'Occident à imposer sa description des autres. Chakrabarty appelle à « provincialiser l'Europe ».</p>
+        <p><strong>BRICS :</strong> Brésil, Russie, Inde, Chine, Afrique du Sud. Croissance forte, mais question sociale en suspens. La distinction Nord/Sud devient instable — mais le Sud l'utilise lui-même comme outil politique.</p>
+    </div>
+</div>
+
+<!-- ========= SEANCE 2 ========= -->
+<div class="seance s2">
+    <h2>SEANCE 2 — La Turquie dans le monde : penser les RI depuis le Sud</h2>
+    <p><strong>Idée directrice :</strong> Depuis l'AKP, la politique étrangère turque est un levier de conquête du pouvoir intérieur. Les positions internationales deviennent une « réserve de voix » pour la politique interne.</p>
+    <h3>1. Rupture avec l'héritage kémaliste</h3>
+    <p>Depuis 1923, la Turquie était résolument tournée vers l'Occident et pratiquait la non‑ingérence dans les affaires arabes. L'AKP rompt avec cette tradition : politique étrangère active au Moyen‑Orient, référence à l'Empire ottoman.</p>
+    <h3>2. La doctrine Davutoğlu</h3>
+    <p>Auteur de <em>La Profondeur stratégique</em> (2001). Ministre des Affaires étrangères (2009), Premier ministre (2014), évincé (2016). Théorie : « zéro problème avec les voisins », politique multidimensionnelle, présence médiatique forte.</p>
+    <h3>3. Le Printemps arabe (2011) : une opportunité</h3>
+    <p>La Turquie y voit une chance de tester la doctrine Davutoğlu et de soutenir les Frères musulmans comme force politique régionale.</p>
+    <h3>4. Les quatre phases de la politique étrangère turque</h3>
+    <ul>
+        <li><strong>Phase 1 – Ouverture (2005‑2011) :</strong> « zéro problème avec les voisins ». Rapprochement avec la Syrie (suppression des visas, relations personnelles Erdoğan/Assad), tentative de réconciliation avec l'Arménie.</li>
+        <li><strong>Phase 2 – Pari frériste (2011‑2013) :</strong> soutien aux Frères musulmans en Égypte (Morsi) et en Syrie. Erdoğan, premier chef d'État en Égypte après la révolution. Turquie = « modèle » islam + démocratie + croissance.</li>
+        <li><strong>Phase 3 – Échec et isolement (2013‑2017) :</strong> coup d'État militaire en Égypte renversant Morsi (2013). Syrie devient un bourbier. Passage à une rhétorique plus radicale. La « précieuse solitude » désigne un isolement régional réel.</li>
+        <li><strong>Phase 4 – Réalisme et médiation (2017‑2024) :</strong> processus d'Astana (Turquie/Russie/Iran). Normalisation avec l'Égypte, la Grèce, Israël, l'Arménie. Séismes de 2023 = catalyseur. Erdoğan : « il n'y a pas de rancune en politique ». Turquie = puissance médiatrice incontournable (accord céréalier Ukraine, Gaza).</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p><strong>Syndrome de Sèvres :</strong> traumatisme du traité de 1920 (démembrement prévu de l'Empire ottoman). Nourrit une méfiance structurelle : l'Occident chercherait toujours à affaiblir la souveraineté turque.</p>
+        <p><strong>Arsenalisation de la communication :</strong> Direction de la communication présidentielle (2018). Séries télévisées sur les services secrets et les drones en Syrie = récits de légitimation néo‑ottomans.</p>
+        <p><strong>Drones Bayraktar TB2 :</strong> produits localement, ils deviennent un game changer militaire et un produit d'exportation majeur, faisant de la Turquie un acteur global de l'armement.</p>
+        <p><strong>Urbicide en Syrie :</strong> destruction délibérée des villes (Alep, Yarmouk) pour effacer l'identité des populations (voir Séance 4).</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite / Nuance</th><th>Notions</th><th>Exemples</th></tr>
+        <tr><td>La Syrie = échec annoncé de la politique étrangère d'Erdoğan</td><td>Rétrospectivement, la Turquie est l'une des mieux placées pour la reconstruction syrienne (BTP, infrastructures).</td><td>Realpolitik, résilience stratégique, ambiguïté stratégique</td><td>Chute d'Assad (déc. 2024). Médiation Ukraine. Processus d'Astana.</td></tr>
+    </table>
+</div>
+
+<!-- ========= SEANCE 3 ========= -->
+<div class="seance s3">
+    <h2>SEANCE 3 — Des frontières et des murs : penser les migrations</h2>
+    <p><strong>Terme à privilégier :</strong> « personnes en situation de migration » plutôt que « migrants », car la migration est une étape de vie et non un statut figé.</p>
+    <h3>1. Chiffres clés</h3>
+    <ul>
+        <li>France : ~10,3 % de la population sont des immigrés (nés étrangers à l'étranger). 36 % ont été naturalisés.</li>
+        <li>Migrants internationaux = ~3,6 % de la population mondiale.</li>
+        <li>Législation française : 26 lois depuis 1986, de plus en plus restrictives (ex. loi Darmanin).</li>
+        <li>La France représente 18 % de la richesse européenne mais accueille seulement 5 % des réfugiés de l'UE (l'Allemagne en accueille 17 fois plus en proportion).</li>
+    </ul>
+    <h3>2. Le phénomène des murs (muraphilie)</h3>
+    <p>74 murs frontaliers dans le monde. La fin de la Guerre froide promettait la chute des murs ; on observe l'inverse. Les murs sont coûteux, inefficaces pour stopper les mobilités, et ils violent les droits fondamentaux.</p>
+    <h3>3. Vocabulaire juridique</h3>
+    <ul>
+        <li><strong>Demandeur d'asile</strong> : personne en attente d'une décision administrative.</li>
+        <li><strong>Réfugié</strong> : statut reconnu par la Convention de Genève (1951). La personne a prouvé une crainte fondée de persécution (race, religion, nationalité, opinion politique, orientation sexuelle). Principe de <strong>non‑refoulement</strong> : interdiction de renvoyer vers un pays où la vie est menacée.</li>
+        <li><strong>« Illégalité » migratoire</strong> : notion instable. L'administration peut elle‑même produire l'irrégularité par ses délais.</li>
+        <li><strong>Règlement de Dublin</strong> : un seul État membre est responsable de l'examen de la demande (pays de première entrée). Déséquilibre structurel : Grèce, Italie, Espagne surchargées.</li>
+    </ul>
+    <h3>4. Le Pacte européen sur la migration (2019 → 2024)</h3>
+    <ul>
+        <li>Filtrage aux frontières extérieures, procédure accélérée pour les demandes jugées irrecevables, mécanisme de solidarité entre États membres.</li>
+        <li>Critique : langage sécuritaire (« lutte contre l'immigration illégale », « filtrage ») qui présente la migration comme une menace.</li>
+        <li><strong>Externalisation</strong> : accord UE‑Turquie (2016) — la Turquie retient les réfugiés contre financement. Tri entre réfugiés, privilégiant les profils « vulnérables ». Les jeunes hommes seuls sont quasi exclus des voies légales.</li>
+        <li><strong>Emmurement</strong> : murs coûteux, inefficaces, paix négative (absence de guerre mais pas de justice).</li>
+    </ul>
+    <h3>5. Déconstruction des mythes migratoires</h3>
+    <ul>
+        <li><strong>Mythe de la submersion</strong> : 10,3 % d'immigrés en France ne correspond pas à une submersion. Les flux ne sont pas unilatéraux.</li>
+        <li><strong>Migration et criminalité</strong> : les étrangers sont surreprésentés dans les condamnations (15,7 % des condamnés pour 7,7 % de la population) MAIS corrélation n'est pas causalité. Facteurs : précarité, âge, contrôles au faciès.</li>
+        <li><strong>Mythe de l'appel d'air</strong> : aucune preuve empirique solide. Argument surtout utilisé dans le débat politique de droite.</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p>Sécuritisation, non‑refoulement, externalisation, emmurement, paix négative.</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite</th><th>Notions</th><th>Exemples</th></tr>
+        <tr><td>Les frontières durcies protègent les États</td><td>Plus on militarise, plus on rend les parcours dangereux. Les murs ne suppriment pas les migrations, ils les détournent.</td><td>Sécuritisation, externalisation, paix négative</td><td>74 murs, accord UE‑Turquie, mur Israël/Palestine</td></tr>
+    </table>
+</div>
+
+<!-- ========= SEANCE 4 ========= -->
+<div class="seance s4">
+    <h2>SEANCE 4 — La Syrie, matrice de la géopolitique actuelle</h2>
+    <p><strong>Pourquoi « matrice » ?</strong> Le conflit syrien est le laboratoire de toutes les mutations contemporaines : impunité face aux crimes de guerre, inaction internationale, nouvelles technologies militaires, instrumentalisation migratoire.</p>
+    <h3>1. Bilan humain</h3>
+    <p>~500 000 morts. 12 millions de déplacés / réfugiés sur une population initiale de 23 millions. Aujourd'hui, 17 millions dépendent de l'aide humanitaire sur 25 millions.</p>
+    <h3>2. Structure du pouvoir assadien</h3>
+    <p>Triptyque : clan Assad (État) + Moukhabarat (services de renseignement) + Shabiha (milices pro‑régime). Michel Seurat parle d'« État de barbarie ».</p>
+    <h3>3. Chronologie du conflit</h3>
+    <ul>
+        <li><strong>2011</strong> : révolution pacifique à Deraa (adolescents arrêtés et torturés pour slogans). Comités de coordination locale (LCC). Le régime répond par la terreur (checkpoints, snipers, sièges collectifs).</li>
+        <li><strong>Opposition armée</strong> : Armée syrienne libre (déserteurs), forces kurdes YPG/YPJ (proches du PKK), Forces démocratiques syriennes (FDS) créées en 2014 contre Daech.</li>
+        <li><strong>Radicalisation</strong> : passage de pro‑démocrates à des groupes comme Al‑Qaïda / Jabhat al‑Nosra / HTS, nourrie par l'abandon de la communauté internationale et les bombardements russes.</li>
+        <li><strong>Acteurs internationaux</strong> : Iran (Hezbollah) + Russie = parrains du régime. Israël = limite l'influence iranienne. Turquie = contre les forces kurdes. Opérations turques : Bouclier de l'Euphrate (2016), Rameau d'olivier (2018), Source de paix (2019), Bouclier du printemps (2020).</li>
+        <li><strong>Chute du régime (nov.‑déc. 2024)</strong> : Assad abandonné par la Russie et l'Iran. Offensive éclair des rebelles : Alep puis Damas. Gouvernement provisoire dominé par HTS, Ahmed al‑Charaa assure l'intérim.</li>
+    </ul>
+    <h3>4. Crimes de guerre et justice</h3>
+    <ul>
+        <li><strong>Opération César</strong> : photographe militaire syrien ayant sorti clandestinement des dizaines de milliers de photos de détenus morts sous la torture. Chaque corps porte 3 numéros (détenu, branche de renseignement, médecine légale).</li>
+        <li><strong>Disparitions forcées</strong> : stratégie délibérée pour briser les familles.</li>
+        <li><strong>Prison de Sednaya</strong> : libération en 2024. Images de femmes détenues avec enfants nés de viols systématiques. Le viol = arme de guerre.</li>
+        <li><strong>Archives brûlées</strong> par les fonctionnaires à la chute du régime, mais de nombreux documents ont survécu.</li>
+    </ul>
+    <h3>5. L'urbicide</h3>
+    <p>Destruction volontaire des villes non pour un objectif militaire mais pour faire disparaître l'identité des habitants. Conceptualisé par Bogdan Bogdanović (ex‑Yougoslavie). Le tyran déteste la ville car elle est berceau de modernité et de multiculturalisme. Ex. : Yarmouk (Syrie), Gaza. La reconstruction peut être un effacement (projet Trump « Côte d'Azur » à Gaza).</p>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p>Urbicide, crimes contre l'humanité, disparition forcée, impunité, ligne rouge, R2P (responsabilité de protéger).</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite</th><th>Exemples</th></tr>
+        <tr><td>La communauté internationale a failli en Syrie (aucune réaction après l'usage d'armes chimiques en 2013)</td><td>La Syrie a produit des avancées : jurisprudence de la justice universelle (condamnations de Shabiha en Allemagne), documentation César.</td><td>César, Sednaya, Alep, chute d'Assad déc. 2024</td></tr>
+    </table>
+</div>
+
+<!-- ========= SEANCE 5 ========= -->
+<div class="seance s5">
+    <h2>SEANCE 5 — Le peuple kurde</h2>
+    <p><strong>Qui sont les Kurdes ?</strong> Plus grand peuple sans État : 42 à 48 millions de personnes, réparties principalement entre Turquie, Iran, Irak, Syrie. Territoire d'environ 500 000 km². Majoritairement musulmans sunnites, plusieurs dialectes.</p>
+    <h3>1. Jalons historiques</h3>
+    <ul>
+        <li><strong>1639</strong> : traité de Qasr‑i‑Chirin (fracture ottomano‑perse).</li>
+        <li><strong>1847</strong> : fin des émirats kurdes autonomes (centralisation ottomane).</li>
+        <li><strong>1908</strong> : révolution des Jeunes‑Turcs (nationalisme turc).</li>
+        <li><strong>1920</strong> : traité de Sèvres (prévoyait un État kurde, jamais appliqué).</li>
+        <li><strong>1923</strong> : traité de Lausanne (frontières actuelles, Kurdes répartis en 4 États).</li>
+    </ul>
+    <h3>2. Le PKK (Parti des travailleurs du Kurdistan)</h3>
+    <p>Fondé par Abdullah Öcalan. Structure en « institution totale » (Goffman) : clandestin, très discipliné, critique/autocritique, leadership fort. Quitter le PKK équivaut à une trahison.</p>
+    <h3>3. Le Rojava et les forces kurdes en Syrie</h3>
+    <ul>
+        <li><strong>PYD</strong> (Parti de l'union démocratique, créé en 2003, proche du PKK).</li>
+        <li><strong>YPG</strong> (Unités de protection du peuple, bras armé masculin).</li>
+        <li><strong>YPJ</strong> (Unités de protection de la femme, bras armé féminin).</li>
+        <li><strong>FDS</strong> (Forces démocratiques syriennes, coalition kurdo‑arabe contre Daech).</li>
+    </ul>
+    <h3>4. Le désengagement du PKK (1999‑2004)</h3>
+    <ul>
+        <li>15 février 1999 : capture d'Öcalan. Cessez‑le‑feu, retrait vers le nord de l'Irak.</li>
+        <li>2004 : abandon de l'objectif d'un Kurdistan indépendant socialiste au profit d'un projet de démocratie et d'autonomie.</li>
+        <li>Facteurs de sortie : macro (changements politiques en Turquie), méso (crise interne du PKK), micro (fatigue individuelle, peur).</li>
+        <li><strong>Habitus militant durable</strong> : même après avoir quitté le PKK, les anciens combattants restent marqués dans leur rapport au corps, à l'autorité, au travail.</li>
+    </ul>
+    <h3>5. La question kurde dans les RI contemporaines</h3>
+    <ul>
+        <li>En Syrie : Assad tend la main aux Kurdes en 2011 pour diviser l'opposition. Les FDS jouent un rôle crucial contre Daech.</li>
+        <li>Turquie : opérations militaires contre les YPG (assimilés au PKK). Tension constante avec le soutien américain aux FDS.</li>
+        <li>Après la chute d'Assad (2024) : avenir du Rojava incertain, HTS et Turquie potentiellement hostiles à l'autonomie kurde.</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p>Institution totale, habitus militant, désengagement, autonomie, question kurde, Rojava.</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite</th><th>Exemples</th></tr>
+        <tr><td>Les Kurdes ont développé une autonomie réelle (Rojava) et sont reconnus pour leur rôle contre Daech</td><td>Aucun État ne reconnaît officiellement le Kurdistan. Les puissances les utilisent de manière instrumentale.</td><td>Capture d'Öcalan, FDS, opérations turques (Rameau d'olivier, Source de paix)</td></tr>
+    </table>
+</div>
+
+<!-- ========= SEANCE 6 ========= -->
+<div class="seance s6">
+    <h2>SEANCE 6 — Les émotions dans les relations internationales</h2>
+    <p><strong>Tournant émotionnel :</strong> à partir des années 1980, réhabilitation des émotions en RI. Impossible de comprendre les dynamiques mondiales sans elles.</p>
+    <h3>1. Trois mouvements favorisant le retour des émotions</h3>
+    <ul>
+        <li><strong>Socialisation</strong> : les sociétés civiles deviennent des actrices des RI.</li>
+        <li><strong>Mondialisation</strong> : impose de reconnaître l'altérité.</li>
+        <li><strong>Déréglementation</strong> : la fin de la Guerre froide libère les passions en politique.</li>
+    </ul>
+    <h3>2. Biais à déconstruire</h3>
+    <p>Il faut cesser d'associer arbitrairement la raison à l'Occident et l'émotion à l'Orient. Les émotions ne sont pas que négatives : la joie peut être un moteur politique (ex. Iran, droits des femmes).</p>
+    <h3>3. Auteurs clés</h3>
+    <ul>
+        <li><strong>Philippe Braud</strong> (1986) : nécessité de mesurer le poids des affects dans l'action politique.</li>
+        <li><strong>Dominique Moïsi</strong> : <em>La Géopolitique de l'émotion</em> : peur (Occident) / humiliation (monde arabe) / espoir (Asie).</li>
+        <li><strong>Robert Frank</strong> : émotionnalisation — comment les émotions collectives surgissent, se propagent et influencent les décisions. Question de la sélectivité : pourquoi la décapitation d'un journaliste occidental suscite‑t‑elle plus d'indignation que 200 000 morts syriens ?</li>
+    </ul>
+    <h3>4. L'humiliation comme dynamique des RI (Bertrand Badie)</h3>
+    <ul>
+        <li>Le système international génère mécaniquement de l'humiliation, produisant des « diplomaties réactives ».</li>
+        <li><strong>4 types d'humiliation</strong> : rabaissement (ex. Russie post‑URSS), déni d'égalité (États « plus égaux que d'autres »), relégation (Iran par les sanctions), stigmatisation (« États voyous »).</li>
+        <li><strong>Diplomatie de la déviance</strong> : l'acteur humilié rejette les normes du système qui le rejette. Instrumentalisé par des dirigeants autoritaires.</li>
+        <li><strong>Paradoxe des sanctions</strong> : perçues comme une « pédagogie de la punition », elles alimentent une rhétorique nationaliste qui soude la population autour du pouvoir (Iran).</li>
+        <li><strong>Double standard</strong> : incohérence entre sanctions appliquées à certains pays et impunité d'autres, impliqués dans des crimes de guerre ou des passés coloniaux non résolus.</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p>Humiliation, rabaissement, diplomatie de la déviance, sélectivité émotionnelle, double standard.</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite</th><th>Exemples</th></tr>
+        <tr><td>Les émotions structurent les RI : l'humiliation produit des politiques étrangères réactives et imprévues.</td><td>Risque de manipulation par les dirigeants autoritaires. La sélectivité émotionnelle est aussi une construction politique.</td><td>Russie post‑soviétique, Iran, Syrie 2013 (ligne rouge non tenue), discours de Macron (2026)</td></tr>
+    </table>
+</div>
+
+<!-- ========= SEANCE 7 ========= -->
+<div class="seance s7">
+    <h2>SEANCE 7 — Théories des relations internationales</h2>
+    <h3>1. Les trois dimensions des RI</h3>
+    <ul>
+        <li><strong>Interétatique</strong> : relations entre États souverains.</li>
+        <li><strong>Transnationale</strong> : flux et acteurs au‑delà des États.</li>
+        <li><strong>Supranationale</strong> : intégration institutionnelle (ex. UE).</li>
+    </ul>
+    <h3>2. Le moment idéaliste (1919‑1939)</h3>
+    <p>La guerre n'est pas fatale : elle naît d'un déficit institutionnel. Trois piliers : sécurité collective (SDN), diffusion des démocraties, renonciation juridique à la guerre (Pacte Briand‑Kellogg, 1928).</p>
+    <h3>3. Naissance du réalisme</h3>
+    <p>Échec des années 1930 (totalitarismes, paralysie de la SDN, Seconde Guerre mondiale). Morgenthau (<em>Politics Among Nations</em>, 1948), E.H. Carr (1939), Raymond Aron (1962).</p>
+
+    <h3>4. Paradigme réaliste</h3>
+    <ul>
+        <li><strong>Statocentrisme</strong> : l'État est l'acteur principal, rationnel et unitaire (« boîte noire »).</li>
+        <li><strong>Anarchie internationale</strong> : absence d'autorité supérieure (≠ chaos).</li>
+        <li><strong>Intérêt national et puissance</strong> : moteur de l'action étatique.</li>
+        <li><strong>Survie</strong> : objectif suprême (intégrité territoriale, souveraineté).</li>
+        <li><strong>Balance of power</strong> : seul le pouvoir limite le pouvoir.</li>
+        <li><strong>Dilemme de sécurité</strong> (Herz, 1951) : un État s'arme pour se protéger → l'adversaire interprète cela comme une menace → course aux armements.</li>
+        <li><strong>Gains relatifs</strong> : l'État se demande si son rival gagne plus que lui.</li>
+        <li><strong>Aron</strong> : les relations entre États se déroulent « à l'ombre de la guerre ».</li>
+    </ul>
+
+    <h3>5. Paradigme libéral</h3>
+    <ul>
+        <li><strong>Paix démocratique</strong> (Russett, 1993) : aucune guerre entre démocraties libérales consolidées aux XIXᵉ‑XXᵉ siècles. Mécanismes culturels (norme pacifique interne) et institutionnels (contre‑pouvoirs).</li>
+        <li><strong>Attention</strong> : paix démocratique ≠ pacifisme. Les démocraties font la guerre aux autocraties.</li>
+        <li><strong>Démocratisation belliciste</strong> (Mansfield & Snyder) : une transition démocratique instable peut mener à des guerres (ex. Serbie années 1990).</li>
+        <li><strong>Libéralisme commercial</strong> : le commerce crée une interdépendance qui rend la guerre irrationnelle. Limite : en 1913, les flux financiers européens étaient records, cela n'a pas empêché la guerre.</li>
+        <li><strong>Libéralisme institutionnel</strong> (Keohane, <em>After Hegemony</em>, 1984) : les organisations internationales réduisent l'incertitude.</li>
+    </ul>
+
+    <h3>6. Paradigme marxiste</h3>
+    <ul>
+        <li>Acteur central = la classe sociale dominante (bourgeoisie), pas l'État.</li>
+        <li><strong>Théorie de la dépendance</strong> (Wallerstein, Prebisch) : Centre (capital, technologie) vs Périphérie (matières premières). Le sous‑développement est le produit d'une intégration asymétrique au marché mondial.</li>
+        <li>Limite : economicisme, mobilité possible (dragons asiatiques), chocs pétroliers (OPEP 1973).</li>
+    </ul>
+</div>
+
+<!-- ========= SEANCE 8 ========= -->
+<div class="seance s8">
+    <h2>SEANCE 8 — L'État dans les relations internationales</h2>
+    <p><strong>Citation d'Aron</strong> : « L'ambassadeur et le soldat vivent et symbolisent les relations internationales ».</p>
+    <h3>1. Les trois éléments juridiques de l'État</h3>
+    <ul>
+        <li><strong>Territoire</strong> : assise matérielle (taille non pertinente).</li>
+        <li><strong>Population</strong> : nationalité.</li>
+        <li><strong>Pouvoir politique organisé</strong> : gouvernement effectif et exclusif. La nature du régime (démocratie/dictature) n'impacte pas la reconnaissance.</li>
+    </ul>
+    <h3>2. Approche constitutive vs déclarative</h3>
+    <p><strong>Constitutive</strong> : l'État n'existe que s'il est reconnu. <strong>Déclarative</strong> : l'État existe dès qu'il remplit les critères, la reconnaissance est un simple constat politique. Ex. Kosovo : reconnu par de nombreux États, mais exclu de l'ONU (veto russe et chinois).</p>
+    <h3>3. La souveraineté</h3>
+    <ul>
+        <li><strong>Westphalie (1648)</strong> : fondement du système interétatique moderne. Autorité du souverain sur son territoire + liberté d'organisation interne (<em>cujus regio, ejus religio</em>).</li>
+        <li><strong>Dimension interne</strong> : autorité suprême, monopole de la contrainte légitime.</li>
+        <li><strong>Dimension externe</strong> : indépendance vis‑à‑vis des autres États, égalité souveraine (juridique, malgré des inégalités de puissance).</li>
+    </ul>
+    <h3>4. Formation historique de l'État</h3>
+    <ul>
+        <li><strong>Charles Tilly</strong> : « La guerre fait les États » — les conflits poussent à la centralisation et à la mobilisation des ressources.</li>
+        <li><strong>Norbert Elias</strong> : processus de civilisation — monopolisation de la violence, transformation des comportements (guerriers → courtisans).</li>
+        <li><strong>Max Weber</strong> : l'État est une entreprise politique revendiquant avec succès le monopole de la contrainte physique légitime.</li>
+    </ul>
+    <h3>5. Transformations contemporaines</h3>
+    <ul>
+        <li>La mondialisation fragilise la souveraineté : frontières moins structurantes, dépendance aux marchés mondiaux. Apparition d'États fragiles / défaillants (<em>quasi‑states</em>, <em>collapsed states</em>).</li>
+        <li>Monde « post‑westphalien » ? Non : transformation, pas disparition. L'État conserve la définition de l'intérêt collectif, le monopole de la violence, la représentation diplomatique.</li>
+        <li><strong>Agentivité (agency)</strong> : capacité d'un acteur à peser. Repose sur ressources + influence + autonomie. Ex. Tuvalu : micro‑État qui transforme sa vulnérabilité climatique en levier diplomatique.</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p>Souveraineté, Westphalie, monopole de la violence, égalité souveraine, agentivité, quasi‑state.</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite</th><th>Exemples</th></tr>
+        <tr><td>L'État demeure l'acteur central</td><td>La mondialisation contraint la souveraineté, des acteurs non étatiques disposent de ressources supérieures à celles d'États moyens.</td><td>Tuvalu, Kosovo, FMN vs États moyens, Weber / Tilly / Elias</td></tr>
+    </table>
+</div>
+
+<!-- ========= SEANCE 9 ========= -->
+<div class="seance s9">
+    <h2>SEANCE 9 — Le système international : hiérarchies, puissances et structure</h2>
+    <p><strong>Définition (Braillard et Djalili) :</strong> un système international se compose de 4 éléments : acteurs + interactions + totalité organisée + structure. Les comportements sont influencés par la structure du système, pas seulement par les acteurs isolés.</p>
+    <h3>1. Sous‑systèmes</h3>
+    <p>Ensembles d'acteurs ayant des interactions plus intenses : régionaux (UE), idéologiques, économiques. Ex. sous‑système panaméricain (identité latino‑américaine mais influence dominante des USA).</p>
+    <h3>2. Histoire des systèmes internationaux</h3>
+    <p>Des systèmes pré‑étatiques existaient (Mésopotamie, Méditerranée). Rupture majeure : traités de Westphalie (1648) → système fondé sur des États souverains.</p>
+    <h3>3. Les formes du pouvoir</h3>
+    <ul>
+        <li><strong>Hard power</strong> : ressources matérielles (militaires, économiques), agit par la contrainte ou la récompense. Limite : supériorité matérielle ne garantit pas le succès (Vietnam, Afghanistan).</li>
+        <li><strong>Soft power</strong> (Nye) : capacité d'influencer par l'attraction (culture, valeurs, modèle).</li>
+        <li><strong>Pouvoir structurel</strong> (Strange) : capacité de façonner les règles, normes et institutions du système international. S'exerce de manière indirecte via socialisation, persuasion.</li>
+    </ul>
+    <h3>4. Hiérarchie des puissances</h3>
+    <ul>
+        <li><strong>Superpuissance</strong> : influence globale, dissuasion mondiale (USA, URSS).</li>
+        <li><strong>Grandes puissances</strong> : capacités importantes dans plusieurs espaces stratégiques.</li>
+        <li><strong>Puissances régionales</strong> : influence à l'échelle d'une région (Turquie, Iran, Arabie saoudite).</li>
+        <li><strong>Puissances émergentes</strong> : en ascension, susceptibles de transformer les équilibres (Brésil, Inde, Chine).</li>
+    </ul>
+    <h3>5. La polarité du système</h3>
+    <ul>
+        <li><strong>Unipolarité</strong> : une seule puissance dominante (Pax britannica, USA années 1990).</li>
+        <li><strong>Bipolarité</strong> : deux grandes puissances + blocs (Guerre froide), certains estiment qu'elle stabilise.</li>
+        <li><strong>Multipolarité</strong> : plusieurs puissances comparables, alliances flexibles, plus d'incertitude.</li>
+    </ul>
+    <h3>6. Approche de Robert Cox</h3>
+    <p>La structure n'est pas seulement une distribution de puissance matérielle, elle combine : capacités matérielles + représentations dominantes + cadres institutionnels. Ex. Consensus de Washington (années 1990).</p>
+</div>
+
+<!-- ========= SEANCE 10 ========= -->
+<div class="seance s10">
+    <h2>SEANCE 10 — Les organisations internationales</h2>
+    <p><strong>Définition doctrinale (CDI, 1956) :</strong> association d'États instituée par traité, dotée d'une constitution et d'organes communs, possédant une personnalité juridique distincte de celle des États membres.</p>
+    <h3>1. G7 / G20 vs OI</h3>
+    <p>G7 et G20 relèvent du <strong>multilatéralisme informel</strong> : pas de traité constitutif formel, pas de secrétariat permanent comparable, pas de personnalité juridique propre, pas de pouvoir contraignant strict.</p>
+    <h3>2. Principe de spécialité</h3>
+    <p>Les OI n'ont pas de compétence générale comme les États. Leurs droits et obligations sont fonctionnels, limités aux buts fixés par l'acte constitutif. Ex. la CIJ a refusé de répondre à l'OMS sur les armes nucléaires (1996) : hors du domaine de l'organisation.</p>
+    <h3>3. Genèse historique</h3>
+    <ul>
+        <li><strong>XIXᵉ siècle</strong> : commissions fluviales (Rhin 1815, Danube 1856), unions administratives (Union télégraphique 1865, UPU 1874).</li>
+        <li><strong>SDN (1919)</strong> : première OI à vocation politique générale, ambition universelle. Échec : incapable d'empêcher les agressions japonaise (1931) et italienne (1935).</li>
+        <li><strong>Essor post‑1945</strong> : Banque mondiale, FMI (1944), ONU (1945), GATT (1947 → OMC 1995), OMS (1948), CECA (1951).</li>
+    </ul>
+    <h3>4. Modes de décision</h3>
+    <ul>
+        <li><strong>Unanimité</strong> : protège la souveraineté mais peut bloquer.</li>
+        <li><strong>Majorité</strong> : facilite l'action mais peut mettre en minorité.</li>
+        <li><strong>Consensus</strong> : évite le vote formel mais masque des désaccords.</li>
+    </ul>
+    <h3>5. Autonomie et rapports de force</h3>
+    <p>Autonomie juridique ≠ autonomie politique. Les gros contributeurs disposent d'un levier d'influence considérable. Les petits États trouvent dans les OI des ressources qu'ils n'ont pas en bilatéral.</p>
+    <h3>6. La sécurité collective et ses échecs</h3>
+    <ul>
+        <li>Principe : agression contre l'un = menace contre tous. Articles 24, 41, 42 de la Charte ONU.</li>
+        <li>Guerre froide : paralysie par le veto. Exception : Corée 1950 (absence temporaire de l'URSS).</li>
+        <li><strong>Opérations de maintien de la paix (OMP)</strong> : développées depuis Suez (1956). Objectif : stabiliser une trêve ou un cessez‑le‑feu avec le consentement des parties.</li>
+    </ul>
+    <h3>7. Quatre lectures théoriques des OI</h3>
+    <ul>
+        <li><strong>Réaliste</strong> : reflets des rapports de puissance.</li>
+        <li><strong>Néo‑institutionnaliste libéral</strong> : facilitent la coopération malgré l'anarchie.</li>
+        <li><strong>Marxiste</strong> : reproduisent un ordre inégal sous couvert de neutralité.</li>
+        <li><strong>Sociologique</strong> : espaces institutionnels avec une logique propre qui façonne les comportements.</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p>Sécurité collective, OMP, principe de spécialité, multilatéralisme informel.</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite</th><th>Exemples</th></tr>
+        <tr><td>Les OI facilitent la coopération internationale</td><td>Asymétrie de puissance (veto au CS), réversibilité des engagements. Si intérêts vitaux menacés, les États écartent le droit international.</td><td>SDN (échec), ONU/CSNU, Trump (retrait Accord de Paris, UNESCO)</td></tr>
+    </table>
+</div>
+
+<!-- ========= SEANCE 11 ========= -->
+<div class="seance s11">
+    <h2>SEANCE 11 — Les acteurs non étatiques</h2>
+    <p><strong>Définition :</strong> tout ce qui n'est pas l'État et ne dépend pas directement de lui. Définition négative et insuffisante — nécessité d'une typologie.</p>
+    <h3>1. Critères d'Esther Barbé</h3>
+    <ul>
+        <li>Capacité de mobiliser des ressources</li>
+        <li>Aptitude à exercer une influence</li>
+        <li>Degré d'autonomie à l'égard des États</li>
+    </ul>
+    <h3>2. Bifurcation (Rosenau)</h3>
+    <p>Monde stato‑centré (souveraineté, territorialité) vs monde multicentré (pluralité des centres de décision, <em>sovereignty‑free actors</em>).</p>
+    <h3>3. Deux pôles du non‑étatique</h3>
+    <ul>
+        <li><strong>Secteur privé marchand</strong> : entreprises, firmes multinationales (FMN).</li>
+        <li><strong>Société civile transnationale</strong> : ONG, mouvements sociaux, think tanks, communautés épistémiques.</li>
+    </ul>
+    <h3>4. Transnationalité (Badie & Smouts)</h3>
+    <ul>
+        <li><strong>Par volonté</strong> : stratégie délibérée coordonnée depuis un centre (ex. une ONG décide d'intervenir).</li>
+        <li><strong>Par destination</strong> : initiatives dispersées produisant des effets transnationaux (ex. migrations économiques).</li>
+        <li><strong>Flux transnationaux</strong> : capitaux, biens, services, information, modèles culturels. Ex. détroit d'Ormuz = 20 % du pétrole mondial.</li>
+    </ul>
+    <h3>5. Les ONG</h3>
+    <ul>
+        <li><strong>Définition ECOSOC (1950)</strong> : critère négatif (absence de création intergouvernementale). Merle ajoute : constitution durable, composition transnationale, finalité non lucrative.</li>
+        <li><strong>Modes d'action</strong> : plaidoyer/advocacy, action de terrain, production d'expertise.</li>
+        <li><strong>Production normative</strong> : cadrage des problèmes, influence sur les négociations, suivi des engagements. Ex. ICBL (campagne contre les mines antipersonnel).</li>
+        <li><strong>Limites</strong> : dépendance aux financements, MONGOs, BONGOs, GONGOs (instrumentalisation).</li>
+    </ul>
+    <h3>6. Les firmes multinationales (FMN)</h3>
+    <ul>
+        <li><strong>Vagues d'internationalisation</strong> : compagnies commerciales (XVIᵉ) → domination européenne coloniale (XIXᵉ) → hégémonie américaine (1945‑1970) → FMN européennes et asiatiques → FMN émergentes (Huawei, Tata, Petrobras).</li>
+        <li><strong>Trois formes de pouvoir</strong> (Ruggie/Strange) : instrumental (lobbying), structurel (chaînes de valeur), discursif (diffusion de référentiels).</li>
+        <li>Les FMN conservent une <strong>nationalité</strong> : liens avec leur pays d'origine.</li>
+        <li><strong>Gouvernance hybride</strong> : normes transnationales issues de configurations mixtes (privés + ONG + institutions publiques).</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p>Agentivité, sovereignty‑free actors, soft power, pouvoir structurel, pouvoir discursif, gouvernance hybride.</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite</th><th>Exemples</th></tr>
+        <tr><td>Les acteurs non étatiques disposent de ressources considérables et influencent l'agenda international</td><td>Pas de personnalité juridique internationale complète. Dépendance aux financements. Neutralité des ONG souvent illusoire.</td><td>Amnesty, HRW, ICBL, Rio 1992 (2400 ONG), Huawei, détroit d'Ormuz</td></tr>
+    </table>
+</div>
+
+<!-- ========= SEANCE 12 ========= -->
+<div class="seance s12">
+    <h2>SEANCE 12 — Ordre international : coexistence, régulation et justice + Méthode du commentaire</h2>
+    <p><strong>Définition de l'ordre international :</strong> ensemble relativement stable de règles, pratiques et institutions encadrant les relations entre unités politiques. N'implique ni harmonie, ni disparition du conflit, ni unité morale du monde. Il s'agit de mécanismes de coexistence, de prévisibilité et de limitation partielle de la violence.</p>
+    <h3>1. Trois niveaux à distinguer</h3>
+    <ul>
+        <li><strong>Système international</strong> : niveau minimal, comportements qui se conditionnent réciproquement.</li>
+        <li><strong>Société internationale</strong> : objectifs communs minimaux (limitation de la violence, respect des engagements).</li>
+        <li><strong>Communauté internationale</strong> : valeurs largement partagées, base identitaire dense — stade plus avancé, pas encore atteint mondialement.</li>
+    </ul>
+    <h3>2. Anarchie ≠ chaos</h3>
+    <p>L'anarchie internationale désigne l'absence d'autorité supérieure aux États. Une société internationale peut être anarchique dans sa structure et partiellement ordonnée dans son fonctionnement.</p>
+    <h3>3. Les trois lectures de l'ordre</h3>
+    <ul>
+        <li><strong>Hobbesienne (réaliste)</strong> : ordre structuré par les rapports de force, la hiérarchie de puissance, la dissuasion. Ex. ordre bipolaire de la Guerre froide.</li>
+        <li><strong>Grotienne (institutionnaliste/libérale)</strong> : ordre par les règles — droit international, diplomatie, coopération multilatérale. Les États s'auto‑limitent.</li>
+        <li><strong>Kantienne (cosmopolite/normative)</strong> : ordre centré sur les individus et les principes universalisables. Prolongement : démocratie cosmopolite (Held, Archibugi).</li>
+    </ul>
+    <h3>4. Tension structurelle : stabilité vs justice</h3>
+    <p>Un ordre peut être stable tout en reproduisant des dominations. Les revendications de justice peuvent déstabiliser des équilibres. Légitimité, stabilité et justice ne se recoupent pas automatiquement. Ex. Guerre froide : stabilité sans justice. Interventions au nom des libertés (Irak 2003) : légitimité affichée, instabilité produite.</p>
+    <h3>5. Vers un ordre globalisé</h3>
+    <p>La globalisation brouille les frontières entre espaces internes et externes. L'État partage la production des normes avec des OI, FMN, ONG. La société internationale contemporaine articule des logiques hétérogènes : puissance (hobbesienne), gouvernance institutionnelle (grotienne), aspirations à la justice (kantienne).</p>
+    <h3>6. Méthode du commentaire de texte</h3>
+    <ul>
+        <li><strong>Étape 1 – Situer</strong> : auteur, courant, ouvrage, date, nature du document.</li>
+        <li><strong>Étape 2 – Idée‑force</strong> : quel problème l'auteur cherche‑t‑il à résoudre ?</li>
+        <li><strong>Étape 3 – Problématique</strong> : question explicite liée à l'extrait.</li>
+        <li><strong>Étape 4 – Plan</strong> : Axe 1 (exposition fidèle de l'argument) + Axe 2 (limites, nuances, confrontation à d'autres courants). Chaque exemple doit être nommé, contextualisé et expliqué.</li>
+        <li><strong>Erreurs à éviter</strong> : résumer sans analyser, problématique trop vague, réciter le cours sans lien avec l'extrait, critiquer trop tôt, exemples non expliqués.</li>
+    </ul>
+    <div class="key-notions">
+        <h4>Notions clés</h4>
+        <p>Ordre international, société internationale, lecture hobbesienne / grotienne / kantienne, légitimité, démocratie cosmopolite, gouvernance globale.</p>
+    </div>
+    <table>
+        <tr><th>Thèse</th><th>Limite</th><th>Exemples</th></tr>
+        <tr><td>La société internationale tend vers un ordre globalisé où l'État partage la régulation</td><td>La logique hobbesienne reste structurante : les rapports de force priment souvent sur le droit et la justice.</td><td>Guerre froide (hobbesienne), ONU (grotienne), R2P (kantienne), Irak 2003</td></tr>
+    </table>
+</div>
+
+<!-- ========= RÉCAP AUTEURS ========= -->
+<div class="recap-authors">
+    <h2>RÉCAPITULATIF FINAL — AUTEURS ET RÉFÉRENCES INCONTOURNABLES</h2>
+    <table>
+        <thead> <tr><th>Auteur</th><th>Courant</th><th>Idée à retenir</th></tr> </thead>
+        <tbody>
+            <tr><td>Morgenthau</td><td>Réalisme</td><td>Politics Among Nations (1948) : l'intérêt national défini comme puissance.</td></tr>
+            <tr><td>Aron</td><td>Réalisme</td><td>Paix et guerre entre les nations (1962) : les RI « à l'ombre de la guerre ».</td></tr>
+            <tr><td>Waltz</td><td>Néoréalisme</td><td>La structure anarchique contraint tous les États de la même façon.</td></tr>
+            <tr><td>Keohane</td><td>Libéralisme institutionnel</td><td>After Hegemony (1984) : les institutions facilitent la coopération.</td></tr>
+            <tr><td>Nye</td><td>Libéralisme</td><td>Soft power : influencer par l'attraction plutôt que par la contrainte.</td></tr>
+            <tr><td>Badie & Smouts</td><td>Transnationalisme</td><td>Le retournement du monde (1999) : transnationalisme et société mondiale.</td></tr>
+            <tr><td>Rosenau</td><td>Transnationalisme</td><td>Turbulence in World Politics (1990) : monde bifurqué.</td></tr>
+            <tr><td>Wallerstein</td><td>Marxisme</td><td>Économie‑monde capitaliste : Centre vs Périphérie.</td></tr>
+            <tr><td>Moïsi</td><td>Tournant émotionnel</td><td>Géopolitique de l'émotion : peur (Occident), humiliation (monde arabe), espoir (Asie).</td></tr>
+            <tr><td>Badie</td><td>Sociologie critique</td><td>Humiliation, diplomatie de la déviance, paradoxe des sanctions.</td></tr>
+            <tr><td>Strange</td><td>Économie politique int.</td><td>Pouvoir structurel : façonner les règles du jeu international.</td></tr>
+            <tr><td>Russett</td><td>Libéralisme républicain</td><td>Paix démocratique (1993) : aucune guerre entre démocraties libérales consolidées.</td></tr>
+            <tr><td>Tilly</td><td>Sociologie historique</td><td>« La guerre fait les États ».</td></tr>
+            <tr><td>Elias</td><td>Sociologie historique</td><td>Processus de civilisation : monopolisation de la violence.</td></tr>
+            <tr><td>Saïd</td><td>Décolonial</td><td>Orientalisme (1978) : domination par l'imposition des représentations.</td></tr>
+            <tr><td>Davutoğlu</td><td>Politique étrangère turque</td><td>Profondeur stratégique (2001), « zéro problème avec les voisins ».</td></tr>
+            <tr><td>Mansfield & Snyder</td><td>Libéralisme critique</td><td>Démocratisation belliciste : une transition démocratique instable peut mener à la guerre.</td></tr>
+            <tr><td>Herz</td><td>Réalisme</td><td>Dilemme de sécurité (1951).</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="footer">
+    Fiche ultra complète — Cours de Leandro Argento, Université Paris Cité. Toutes séances 1 à 12. Bon courage pour l'examen !
+</div>
+
+</body>
+</html>
